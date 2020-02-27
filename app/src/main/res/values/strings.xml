@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Freshify</string>
+    <string name="app_name_hi">फ्रेशिफाई</string>
+    <string name="version">Version</string>
+    <string name="log_in">Log In</string>
+    <string name="mobile_no">Mobile no.</string>
+    <string name="mobile">Mobile</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_shopby">Shop By</string>
+    <string name="menu_todaysoffer">Today\'s Offer</string>
+    <string name="menu_mycart">My Cart</string>
+    <string name="menu_myorder">My Orders</string>
+    <string name="menu_mywishlist">My Wishlist</string>
+    <string name="menu_myaccount">My Account</string>
+
+
+    <string name="finish">Finish</string>
+    <string name="i_am">I\'m a</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="address">Address</string>
+    <string name="select">Select</string>
+    <string name="others">Other</string>
+    <string name="hello">Hello !</string>
+    <string-array name="women_jewellery_list">
+        <item>Ring</item>
+        <item>Ear Rings</item>
+        <item>Bangles</item>
+        <item>Bracelets</item>
+        <item>Nose Ring</item>
+        <item>Nose Pin</item>
+        <item>Necklace</item>
+        <item>Chain</item>
+        <item>Pendant</item>
+        <item>Mangalsutra</item>
+        <item>Anklets(Payal)</item>
+        <item>Toe Rings</item>
+        <item>Maang Tika</item>
+        <item>Kardhani</item>
+        <item>Armlet</item>
+    </string-array>
+    <string-array name="man_jewellery_list">
+        <item>Ring</item>
+        <item>Ear Ring</item>
+        <item>Bangles</item>
+        <item>Kada</item>
+        <item>Bracelet</item>
+        <item>Chain</item>
+        <item>Cuff links</item>
+        <item>Pendant</item>
+    </string-array>
+    <string-array name="kids_jewellery_list">
+        <item>Ring</item>
+        <item>Ear Rings</item>
+        <item>Bracelets</item>
+        <item>Bangles</item>
+        <item>Necklace</item>
+        <item>Pendant</item>
+        <item>Anklets</item>
+        <item>Chain</item>
+    </string-array>
+    <string-array name="metal_list">
+        <item>10Kt Gold</item>
+        <item>14Kt Gold</item>
+        <item>18Kt Gold</item>
+        <item>22Kt Gold</item>
+        <item>10Kt Yellow Gold</item>
+        <item>14Kt Yellow Gold</item>
+        <item>18Kt Yellow Gold</item>
+        <item>22Kt Yellow Gold</item>
+        <item>10Kt Rose Gold</item>
+        <item>14Kt Rose Gold</item>
+        <item>18Kt Rose Gold</item>
+        <item>22Kt Rose Gold</item>
+        <item>950 Platinum</item>
+        <item>900 Platinum</item>
+        <item>Silver</item>
+        <item>Steel</item>
+        <item>Titanium</item>
+        <item>Tungsten</item>
+    </string-array>
+    <string-array name="diamond_purity">
+        <item>FL</item>
+        <item>IF</item>
+        <item>VVS</item>
+        <item>VS</item>
+        <item>SI</item>
+        <item>I</item>
+    </string-array>
+    <string-array name="diamond_color">
+        <item>Colorless</item>
+        <item>Near Colorless</item>
+        <item>Faint Yellow</item>
+        <item>Very Light Yellow</item>
+        <item>light Yellow</item>
+    </string-array>
+    <string name="my_notification">My Notifications</string>
+
+
+</resources>
+

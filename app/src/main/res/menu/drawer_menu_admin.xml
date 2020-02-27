@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/admin_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/admin_products"
+            android:title="Search Product" />
+
+    </group>
+    <item android:title="Activities">
+        <menu>
+            <item
+                android:id="@+id/menu_myaccount"
+                android:title="@string/menu_myaccount"/>
+            <item
+                android:id="@+id/admin_order"
+                android:title="Orders" />
+            <item
+                android:id="@+id/admin_daybook"
+                android:title="Day Book"/>
+
+        </menu>
+    </item>
+
+    <item android:title="Tools">
+        <menu>
+
+            <item
+                android:id="@+id/menu_contactus"
+                android:title="Contact us"/>
+            <item
+                android:id="@+id/menu_about"
+                android:title="About" />
+            <item
+                android:id="@+id/menu_logout"
+                android:title="Logout"
+                android:onClick="adminLogout"/>
+        </menu>
+    </item>
+</menu>

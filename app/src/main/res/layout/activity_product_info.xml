@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".jewellery.ProductInfo">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/slide_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+
+                <LinearLayout
+                    android:id="@+id/dot_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/product_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/stock"
+                            android:hint="Name"
+                            android:maxLines="2"
+                            android:padding="2dp"
+                            android:textAlignment="textStart"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/stock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:hint="stock"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/price_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Discount"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/product_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/txt_start"
+                            android:hint="0%off"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/product_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:hint="Price"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_alignStart="@id/product_price"
+                            android:layout_alignEnd="@id/product_price"
+                            android:layout_centerVertical="true"
+                            android:background="@color/colorPrimary" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Total"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/product_offer_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:hint="Offer price"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/empty_round_background_dark"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="5dp"
+                android:text="Product Detail"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="2">
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Metal-Purity"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_puirty"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="metal/puirty"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Approximate weight"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="weight"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Diamonds"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_diamonds"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="yes/no"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Hallmark"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_hallmark"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="yes/no"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Certificate"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_certificate"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="certificate"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="4dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:text="Product Other details"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Item for"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_for"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="for"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Item type"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_type"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="type"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Item Model no."
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/product_model_no"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:hint="model_no"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/diamond_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="2"
+                        android:visibility="gone">
+
+                        <TableRow android:padding="4dp">
+
+                            <TextView
+                                android:id="@+id/d_d"
+                                android:layout_span="2"
+                                android:layout_height="wrap_content"
+                                android:text="Diamond details"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:text="Diamond weight"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/diamond_weight"
+                                android:layout_column="2"
+                                android:layout_height="wrap_content"
+                                android:hint="Diamond weight"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_column="0"
+                                android:layout_height="wrap_content"
+                                android:text="Diamond purity"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/diamond_purity"
+                                android:layout_column="2"
+                                android:layout_height="wrap_content"
+                                android:hint="Diamond purity"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:padding="2dp">
+
+                            <TextView
+                                android:layout_column="0"
+                                android:layout_height="wrap_content"
+                                android:text="Diamond color"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text=":"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/diamond_color"
+                                android:layout_column="2"
+                                android:layout_height="wrap_content"
+                                android:hint="Diamond color"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:id="@+id/for_user_product_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Quantity"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/product_quantity"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center" />
+
+                        <ImageButton
+                            android:id="@+id/minus"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:layout_toStartOf="@id/product_quantity"
+                            android:background="@drawable/ic_minus"
+                            android:backgroundTint="@color/colorPrimaryDark" />
+
+                        <ImageButton
+                            android:id="@+id/plus"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:layout_toEndOf="@id/product_quantity"
+                            android:background="@drawable/ic_plus"
+                            android:backgroundTint="@color/colorPrimaryDark" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/quantity_err_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_alert"
+                        android:textAlignment="textEnd"
+                        android:textColor="#AAFF0000"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/order_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/empty_round_background_dark"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="Order Now"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/or"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Or"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/or"
+                            android:background="@color/colorPrimary" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/or"
+                            android:background="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/add_in_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/empty_round_background_dark"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="Add to Cart"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/add_in_wishlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/empty_round_background_dark"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="Add to Wishlist"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/for_admin_product_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/change_product_offer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/empty_round_background_dark"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="Change product offer, price &amp; Quantity"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/show_in_offer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/empty_round_background_dark"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="Show in Daliy's Offer"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/empty_round_background_dark"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="Remove Product"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

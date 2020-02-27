@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.aasoo.freshifybeta.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_shopby"
+        android:name="com.aasoo.freshifybeta.ui.shopby.ShopByFragment"
+        android:label="@string/menu_shopby"
+        tools:layout="@layout/fragment_shop_by" />
+
+    <fragment
+        android:id="@+id/nav_todaysoffer"
+        android:name="com.aasoo.freshifybeta.ui.todaysoffer.TodaysOfferFragment"
+        android:label="@string/menu_todaysoffer"
+        tools:layout="@layout/fragment_todays_offer" />
+
+    <fragment
+        android:id="@+id/menu_mycart"
+        android:name="com.aasoo.freshifybeta.ui.myactivities.MyCartFragment"
+        android:label="@string/menu_mycart"
+        tools:layout="@layout/fragment_my_cart" />
+
+    <fragment
+        android:id="@+id/menu_myorders"
+        android:name="com.aasoo.freshifybeta.ui.myactivities.MyOrdersFragment"
+        android:label="@string/menu_myorder"
+        tools:layout="@layout/fragment_my_orders" />
+
+    <fragment
+        android:id="@+id/menu_mywishlist"
+        android:name="com.aasoo.freshifybeta.ui.myactivities.MyWishlistFragment"
+        android:label="@string/menu_mywishlist"
+        tools:layout="@layout/fragment_my_wishlist" />
+
+    <fragment
+        android:id="@+id/menu_myaccount"
+        android:name="com.aasoo.freshifybeta.ui.myactivities.MyAccountFragment"
+        android:label="@string/menu_myaccount"
+        tools:layout="@layout/fragment_my_account" />
+    <activity
+        android:id="@+id/menu_mynotification"
+        android:name="com.aasoo.freshifybeta.ui.myactivities.MyNotificationActivity"
+        android:label="@string/my_notification"
+        tools:layout="@layout/activity_my_notification" />
+
+    <fragment
+        android:id="@+id/menu_about"
+        android:name="com.aasoo.freshifybeta.ui.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/menu_contactus"
+        android:name="com.aasoo.freshifybeta.ui.ContactUsFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact_us" />
+
+
+</navigation>

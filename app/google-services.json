@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "909124361533",
+    "firebase_url": "https://freshify-502ca.firebaseio.com",
+    "project_id": "freshify-502ca",
+    "storage_bucket": "freshify-502ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909124361533:android:b053536c20ba53c5d17954",
+        "android_client_info": {
+          "package_name": "com.aasoo.freshifybeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909124361533-2tfjfi1rs36sdeq9rgkf2ovkprmoo3c8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aasoo.freshifybeta",
+            "certificate_hash": "7c879d7b36e434bc14c009656774493cefaf1a56"
+          }
+        },
+        {
+          "client_id": "909124361533-tg0a6vqm2o55284eio50quicsa788ep7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMsVtaUmZ-z8YPGW2LwEjwwDw27nDa3TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909124361533-tg0a6vqm2o55284eio50quicsa788ep7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

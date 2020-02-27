@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/user_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            app:tabIndicatorColor="@color/colorslide_4"
+            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabTextColor="@color/inactive_dot" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@id/user_tablayout"
+            android:id="@+id/user_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_filter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/fui_transparent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

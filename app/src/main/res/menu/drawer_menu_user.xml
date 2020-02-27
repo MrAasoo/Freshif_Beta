@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/menu_home"
+            android:icon="@drawable/ic_home"/>
+        <item
+            android:id="@+id/nav_shopby"
+            android:title="@string/menu_shopby"
+            android:icon="@drawable/ic_shortby"/>
+        <item
+            android:id="@+id/nav_todaysoffer"
+            android:title="@string/menu_todaysoffer"
+            android:icon="@drawable/ic_offers"/>
+
+    </group>
+    <item android:title="My Activities">
+        <menu>
+            <item
+                android:id="@+id/menu_myaccount"
+                android:title="@string/menu_myaccount"
+                android:icon="@drawable/ic_account"/>
+
+            <item
+                android:id="@+id/menu_mynotification"
+                android:title="@string/my_notification"
+                android:icon="@drawable/ic_notification"/>
+
+            <item
+                android:id="@+id/menu_mycart"
+                android:title="@string/menu_mycart"
+                android:icon="@drawable/ic_cart"/>
+            <item
+                android:id="@+id/menu_myorders"
+                android:title="@string/menu_myorder"
+                android:icon="@drawable/ic_order"/>
+            <item
+                android:id="@+id/menu_mywishlist"
+                android:title="@string/menu_mywishlist"
+                android:icon="@drawable/ic_wish"/>
+
+        </menu>
+    </item>
+    <item android:title="Tools">
+        <menu>
+            <item
+                android:id="@+id/menu_about"
+                android:title="About"
+                android:icon="@drawable/ic_about"/>
+            <item
+                android:id="@+id/menu_contactus"
+                android:title="Contact us"
+                android:icon="@drawable/ic_contact"/>
+            <item
+                android:id="@+id/menu_rateus"
+                android:title="Rate us"
+                android:icon="@drawable/ic_rate"/>
+            <item
+                android:id="@+id/menu_logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_logout"
+                android:onClick="userLogout"/>
+        </menu>
+    </item>
+
+
+</menu>

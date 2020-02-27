@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/admin_home">
+    <fragment
+        android:id="@+id/admin_home"
+        android:name="com.aasoo.freshifybeta.admin_ui.AdminHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_admin_home" />
+
+    <fragment
+        android:id="@+id/admin_products"
+        android:name="com.aasoo.freshifybeta.admin_ui.ProductsFragment"
+        android:label="Search product"
+        tools:layout="@layout/fragment_products" />
+
+    <fragment
+        android:id="@+id/menu_myaccount"
+        android:name="com.aasoo.freshifybeta.ui.myactivities.MyAccountFragment"
+        android:label="@string/menu_myaccount"
+        tools:layout="@layout/fragment_my_account" />
+    <activity
+        android:id="@+id/admin_order"
+        android:name="com.aasoo.freshifybeta.ManageOrdersActivity"
+        android:label="Manage Order"
+        tools:layout="@layout/activity_manage_orders" />
+
+    <fragment
+        android:id="@+id/admin_daybook"
+        android:name="com.aasoo.freshifybeta.admin_ui.DayBookFragment"
+        android:label="Day Book"
+        tools:layout="@layout/fragment_day_book" />
+    <fragment
+        android:id="@+id/menu_about"
+        android:name="com.aasoo.freshifybeta.ui.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/menu_contactus"
+        android:name="com.aasoo.freshifybeta.ui.ContactUsFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact_us" />
+</navigation>

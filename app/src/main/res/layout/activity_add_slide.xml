@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".image_slide.AddSlideActivity"
+    android:gravity="center"
+    android:background="@color/colorslide_3">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true">
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Slide Image : "
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/slide_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/placeholder"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/choose_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Choose slide slideImage"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/holo_blue_light"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/choose_err_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_alert"
+        android:padding="5dp"
+        android:text="Please choose slideImage."
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorRed"
+        android:visibility="gone" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:text="Upload"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/empty_round_background_dark"
+        android:backgroundTint="@color/colorGreen" />
+
+</LinearLayout>

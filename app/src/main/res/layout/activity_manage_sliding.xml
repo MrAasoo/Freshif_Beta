@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    tools:context=".image_slide.AddSlideActivity$ManageSlidingActivity">
+    <TextView
+        android:id="@+id/add_slide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new slide"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/empty_round_background_dark"
+        android:backgroundTint="@color/colorGold"
+        android:textStyle="bold|normal"
+        android:textSize="16sp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/image_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

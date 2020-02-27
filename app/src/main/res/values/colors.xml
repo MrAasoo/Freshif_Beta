@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#FF2D23</color>
+    <color name="colorPrimary">#FF2D3C</color>
+    <color name="colorPrimaryLight">#FF2D50</color>
+    <color name="colorAccent">#8B8080</color>
+
+    <color name="colorAccentTrans">#4D8B8080</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorGreen">#23B923</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGold">#ECC42E</color>
+
+
+    <color name="colorslide_1">#f1b7ff</color>
+    <color name="colorslide_2">#ffb7c5</color>
+    <color name="colorslide_3">#C5FFB7</color>
+    <color name="colorslide_4">#b7fff1</color>
+
+    <color name="active_dot">#ff4166</color>
+    <color name="inactive_dot">#FFE5EA</color>
+</resources>
