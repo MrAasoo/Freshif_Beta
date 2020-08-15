@@ -26,6 +26,7 @@
                     android:layout_height="150dp"
                     android:layout_centerVertical="true"
                     android:layout_margin="10dp"
+                    android:transitionName="PROFILE_IMAGE"
                     app:civ_border_color="@color/colorPrimary"
                     app:civ_border_width="4dp" />
 
@@ -41,8 +42,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:text="@string/hello"
-                        android:textSize="16sp"
-                        android:textColor="@color/colorPrimary" />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
                     <TextView
                         android:id="@+id/user_name"
                         android:layout_width="match_parent"
@@ -50,7 +52,9 @@
                         android:layout_margin="2dp"
                         android:hint="Name"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:transitionName="USER_NAME" />
+
                     <TextView
                         android:id="@+id/user_account_no"
                         android:layout_width="match_parent"
@@ -74,11 +78,11 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:visibility="gone"
             android:id="@+id/user_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:visibility="gone"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -89,54 +93,53 @@
 
                 <TextView
                     android:id="@+id/user_balance_txt"
-                    android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:text="Total due Amount"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_margin="5dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"
                     android:id="@+id/user_balance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="amount due" />
+                    android:layout_margin="5dp"
+                    android:hint="amount due"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
 
 
                 <TextView
                     android:id="@+id/all_transaction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/empty_round_background_dark"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableEnd="@drawable/ic_next"
                     android:maxLines="1"
                     android:padding="5dp"
                     android:text="My Dashboard"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp"
-                    android:background="@drawable/empty_round_background_dark"
-                    android:drawableEnd="@drawable/ic_next"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
                 <TextView
                     android:id="@+id/my_referral"
-                    android:padding="5dp"
-                    android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/empty_round_background_dark"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableEnd="@drawable/ic_next"
+                    android:padding="5dp"
                     android:text="My Referral"
-                    android:textStyle="bold"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp"
-                    android:drawableEnd="@drawable/ic_next"
-                    android:background="@drawable/empty_round_background_dark"
-                    android:backgroundTint="@color/colorPrimary"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
-
 
 
         </androidx.cardview.widget.CardView>

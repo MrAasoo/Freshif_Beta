@@ -1,10 +1,12 @@
 package com.aasoo.freshifybeta;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Pair;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -69,7 +71,10 @@ public class ProfileActivity extends AppCompatActivity {
                         addOptionalMobile(mCurrentUser);
                         break;
                     case R.id.edit_image:
-                        startActivity(new Intent(context, EditImageActivity.class));
+                        Intent editImage = new Intent(context, EditImageActivity.class);
+                        Pair<View, String> imageAnimation = Pair.create(findViewById(R.id.profile_image),"PROFILE_IMAGE");
+                        ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(ProfileActivity.this,imageAnimation);
+                        startActivity(editImage, activityOptions.toBundle());
                         break;
                 }
             }

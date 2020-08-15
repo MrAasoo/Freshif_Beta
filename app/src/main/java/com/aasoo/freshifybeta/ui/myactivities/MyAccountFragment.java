@@ -1,8 +1,10 @@
 package com.aasoo.freshifybeta.ui.myactivities;
 
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.aasoo.freshifybeta.ui.DashboardActivity;
-import com.aasoo.freshifybeta.ui.MyReferralActivity;
 import com.aasoo.freshifybeta.ProfileActivity;
 import com.aasoo.freshifybeta.R;
 import com.aasoo.freshifybeta.model.UserData;
+import com.aasoo.freshifybeta.ui.DashboardActivity;
+import com.aasoo.freshifybeta.ui.MyReferralActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,7 +36,7 @@ public class MyAccountFragment extends Fragment {
 
 
     CircleImageView profile_image;
-    TextView user_account_no, user_name, edit_profile, dashboard, user_balance,user_balance_txt,my_referral;
+    TextView user_account_no, user_name, edit_profile, dashboard, user_balance, user_balance_txt, my_referral;
     CardView user_layout;
 
     public MyAccountFragment() {
@@ -44,7 +46,6 @@ public class MyAccountFragment extends Fragment {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my_account, container, false);
-
 
 
         profile_image = view.findViewById(R.id.profile_image);
@@ -72,17 +73,18 @@ public class MyAccountFragment extends Fragment {
                     }
                     user_name.setText(user.getUser_name());
                     user_account_no.setText(user.getUser_account_no());
-                    if(user.getUser_type().equals("user")){
+                    if (user.getUser_type().equals("user")) {
                         user_layout.setVisibility(View.VISIBLE);
                         String balance = user.getUser_balance();
                         int bal = Integer.parseInt(balance);
-                        if(bal<0){
+                        if (bal < 0) {
                             user_balance_txt.setText("Advance amount");
-                            user_balance.setText("₹ "+balance.substring(1));
-                        }else {
+                            user_balance.setText("₹ " + balance.substring(1));
+                        } else {
                             user_balance_txt.setText("Due balance");
-                        user_balance.setText("₹ "+balance);
-                    }}
+                            user_balance.setText("₹ " + balance);
+                        }
+                    }
                 }
             }
 
@@ -97,8 +99,13 @@ public class MyAccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent profileIntent = new Intent(getContext(), ProfileActivity.class);
-                profileIntent.putExtra("user_id",mCurrentUser);
-                startActivity(profileIntent);
+                profileIntent.putExtra("user_id", mCurrentUser);
+
+                Pair<View, String> pair_image = Pair.create(getView().findViewById(R.id.profile_image), "PROFILE_IMAGE");
+                Pair<View, String> pair_name = Pair.create(getView().findViewById(R.id.user_name), "USER_NAME");
+
+                ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(getActivity(), pair_image, pair_name);
+                startActivity(profileIntent, activityOptions.toBundle());
             }
         });
 
@@ -106,7 +113,7 @@ public class MyAccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DashboardActivity.class);
-                intent.putExtra("user_id",mCurrentUser);
+                intent.putExtra("user_id", mCurrentUser);
                 startActivity(intent);
             }
         });
@@ -115,8 +122,8 @@ public class MyAccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), MyReferralActivity.class);
-                intent.putExtra("user_id",mCurrentUser);
-                intent.putExtra("user_type","user");
+                intent.putExtra("user_id", mCurrentUser);
+                intent.putExtra("user_type", "user");
                 startActivity(intent);
             }
         });

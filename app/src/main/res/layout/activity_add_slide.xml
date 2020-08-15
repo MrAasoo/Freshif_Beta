@@ -58,14 +58,13 @@
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_margin="10dp"
         android:text="Upload"
         android:textAllCaps="false"
         android:textStyle="bold"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/empty_round_background_dark"
         android:backgroundTint="@color/colorGreen" />
 
 </LinearLayout>
