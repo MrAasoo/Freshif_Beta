@@ -102,6 +102,7 @@
         <item>light Yellow</item>
     </string-array>
     <string name="my_notification">My Notifications</string>
+    <string name="rings_txt">Rings</string>
 
 
 </resources>
